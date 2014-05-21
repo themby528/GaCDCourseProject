@@ -74,4 +74,4 @@ tidyDataUCI <- aggregate(.~activitydescriptors + subject, data=tidyDataUCI, mean
 #save tidy data for future use
 #I moved my wd up one level to save the data so i didn't touch teh zipped file at all
 setwd("~/Data Scientist Spec/Getting and Cleaning Data/Course Project")
-save(tidyDataUCI,file="tidyDataUCI.Rda")
+write.table(tidyDataUCI,file="tidyDataUCI.txt", sep="\t")
